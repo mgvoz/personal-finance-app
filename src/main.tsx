@@ -23,7 +23,7 @@ const AnimatedRoutes = () => {
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
   <React.StrictMode>
-    <BrowserRouter>
+    <BrowserRouter basename="/personal-finance-app/">
       <AnimatedRoutes />
     </BrowserRouter>
     <App></App>
