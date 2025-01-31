@@ -2,11 +2,11 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import "./index.css";
 import {
-  BrowserRouter,
   Route,
   Routes,
   useLocation,
   HashRouter,
+  RouterProvider,
 } from "react-router-dom";
 import { AnimatePresence } from "framer-motion";
 import GetStarted from "./components/GetStarted/GetStarted.tsx";
