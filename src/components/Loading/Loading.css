@@ -1,0 +1,85 @@
+.loading-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+  padding: 50px 0 50px 0;
+  border: solid 1px black;
+  border-radius: 1%;
+  flex-wrap: wrap;
+  min-width: 205px;
+  height: calc(100vh - 85px);
+  box-shadow: 5px 5px #228754;
+  background: linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 0.8239670868347339) 0%,
+      rgba(249, 250, 250, 1) 100%,
+      rgba(254, 254, 254, 1) 100%
+    ),
+    url("../../assets/rb_145051.png");
+  background-position: center;
+}
+
+.greeting {
+  font-size: 32px;
+  font-weight: 500;
+  text-align: center;
+}
+
+.loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 50px;
+}
+
+.findings {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  font-size: 18px;
+  min-height: 150px;
+}
+
+.status {
+  font-size: 32px;
+}
+
+.carousel {
+  width: 150px;
+}
+
+.accounts,
+.transactions {
+  height: 35px;
+}
+
+.show {
+  display: block;
+}
+
+.noshow {
+  display: none;
+}
+
+.green {
+  color: #228754;
+  font-weight: 500;
+}
+
+@media (max-width: 768px) {
+  .greeting,
+  .status {
+    font-size: 18px;
+    word-wrap: normal;
+  }
+
+  .loading {
+    flex-direction: column;
+  }
+}

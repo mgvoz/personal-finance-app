@@ -1,0 +1,86 @@
+.debt-container {
+  min-height: 325.559px;
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.debt-header {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 5px 5px 0 5px;
+}
+
+.debt-title {
+  padding: 5px;
+  font-size: 24px;
+}
+
+.debt-number {
+  padding: 5px;
+  font-size: 24px;
+  font-weight: 500;
+  color: #228754;
+}
+
+.debt-details {
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+  padding: 0 10px 10px 10px;
+}
+
+.balance-record-container {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: start;
+}
+
+.balance-records {
+  overflow-y: auto;
+  height: 170px;
+  padding: 15px;
+}
+
+.balance-record {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: start;
+  align-items: center;
+  font-weight: 500;
+  color: #228754;
+}
+
+.balances-heading {
+  text-decoration: underline;
+  padding: 5px;
+}
+
+.account-name {
+  text-align: left;
+}
+
+.placeholder-container {
+  height: 100%;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+@media (max-width: 768px) {
+  .balance-records {
+    font-size: 10px;
+  }
+
+  .chart-left-1 {
+    overflow-x: auto;
+  }
+}
