@@ -1,5 +1,4 @@
 import "./Loading.css";
-import { useNavigate } from "react-router";
 import Spinner from "react-bootstrap/Spinner";
 import { useState } from "react";
 import transactions from "../../DB/transactions";
@@ -7,12 +6,11 @@ import accounts from "../../DB/accounts";
 import { motion } from "framer-motion";
 
 function Loading() {
-  let navigate = useNavigate();
   const [showAccounts, setShowAccounts] = useState(false);
   const [showTransactions, setShowTransactions] = useState(false);
 
-  var loadingRedirectFunc = () => {
-    navigate("/personal-finance-app/#home");
+  const loadingRedirectFunc = () => {
+    window.location.hash = "/personal-finance-app/#home";
   };
 
   var showAccountsFunc = () => {
