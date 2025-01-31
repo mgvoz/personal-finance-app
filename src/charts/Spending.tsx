@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import ReactApexChart from "../../node_modules/react-apexcharts";
+import Chart from "react-apexcharts";
 import months from "../DB/months";
 import transactions from "../DB/transactions";
 import { Month, Transaction } from "../models/models";
@@ -62,7 +62,7 @@ function Spending(props: any) {
         size: 1,
       },
       xaxis: {
-        categories: chartMonths.map((month) => {
+        categories: chartMonths.map((month: { name: any }) => {
           return month.name;
         }),
         title: {
@@ -244,7 +244,7 @@ function Spending(props: any) {
 
   return (
     <>
-      <ReactApexChart
+      <Chart
         options:any={chartState.options}
         series={chartState.series}
         type="line"
