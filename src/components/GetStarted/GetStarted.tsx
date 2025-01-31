@@ -17,12 +17,7 @@ function GetStarted() {
       event.preventDefault();
       event.stopPropagation();
     } else {
-      localStorage.setItem(
-        "personal-finance-app-user-name",
-        event.currentTarget
-      );
     }
-    console.log(event);
 
     setValidated(true);
   };
@@ -43,7 +38,7 @@ function GetStarted() {
             noValidate
             validated={validated}
             onSubmit={handleSubmit}
-            action={"/loading"}
+            action={"/personal-finance-app/loading"}
           >
             <Form.Group
               as={Col}
@@ -52,7 +47,17 @@ function GetStarted() {
               className="mb-3"
             >
               <Form.Label>Name</Form.Label>
-              <Form.Control required type="text" placeholder="John Smith" />
+              <Form.Control
+                required
+                type="text"
+                placeholder="John Smith"
+                onChange={(e) =>
+                  localStorage.setItem(
+                    "personal-finance-app-user-name",
+                    e.target.value
+                  )
+                }
+              />
               <Form.Control.Feedback type="invalid">
                 Name is required.
               </Form.Control.Feedback>

@@ -12,7 +12,7 @@ function Loading() {
   const [showTransactions, setShowTransactions] = useState(false);
 
   var loadingRedirectFunc = () => {
-    navigate("/home");
+    navigate("/personal-finance-app/home");
   };
 
   var showAccountsFunc = () => {
