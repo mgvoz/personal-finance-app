@@ -1,7 +1,13 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import "./index.css";
-import { BrowserRouter, Route, Routes, useLocation } from "react-router-dom";
+import {
+  BrowserRouter,
+  Route,
+  Routes,
+  useLocation,
+  HashRouter,
+} from "react-router-dom";
 import { AnimatePresence } from "framer-motion";
 import GetStarted from "./components/GetStarted/GetStarted.tsx";
 import Home from "./components/Home/Home.tsx";
@@ -23,9 +29,9 @@ const AnimatedRoutes = () => {
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
   <React.StrictMode>
-    <BrowserRouter basename="/personal-finance-app/">
+    <HashRouter basename="/personal-finance-app/">
       <AnimatedRoutes />
-    </BrowserRouter>
+    </HashRouter>
     <App></App>
   </React.StrictMode>
 );
