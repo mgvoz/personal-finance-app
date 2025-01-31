@@ -18,13 +18,13 @@ function Home() {
     new FilterState(accountTypeState, transactionTypeState, monthState)
   );
 
-  var onSelectAccountType = (eventKey: any, event: Object) => {
+  var onSelectAccountType = (eventKey: any) => {
     setAccountTypeState(eventKey);
   };
-  var onSelectTransactionType = (eventKey: any, event: Object) => {
+  var onSelectTransactionType = (eventKey: any) => {
     setTransactionTypeState(eventKey);
   };
-  var onSelectMonth = (eventKey: any, event: Object) => {
+  var onSelectMonth = (eventKey: any) => {
     setMonthState(eventKey);
   };
 

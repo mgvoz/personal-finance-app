@@ -1,11 +1,11 @@
 import { useEffect, useState } from "react";
-import Chart from "react-apexcharts";
+import ReactApexChart from "../../node_modules/react-apexcharts";
 import months from "../DB/months";
 import transactions from "../DB/transactions";
 import { Month, Transaction } from "../models/models";
 import "./charts.css";
 
-function Spending(props) {
+function Spending(props: any) {
   console.log(props);
 
   var initialValue: { name: string; data: number[] }[] = [];
@@ -187,7 +187,7 @@ function Spending(props) {
         //console.log(accountType);
         var amountArray: number[] = [];
 
-        chartMonths.forEach((month) => {
+        chartMonths.forEach((month: { id: number }) => {
           //console.log(month);
           var findValues = filterTransactionsByAccountType.filter(
             (transaction) => {
@@ -244,8 +244,8 @@ function Spending(props) {
 
   return (
     <>
-      <Chart
-        options={chartState.options}
+      <ReactApexChart
+        options:any={chartState.options}
         series={chartState.series}
         type="line"
         width="500"
