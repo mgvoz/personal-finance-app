@@ -38,7 +38,7 @@ function GetStarted() {
             noValidate
             validated={validated}
             onSubmit={handleSubmit}
-            action={"/personal-finance-app/loading"}
+            action={"/personal-finance-app/#loading"}
           >
             <Form.Group
               as={Col}
