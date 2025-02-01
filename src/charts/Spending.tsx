@@ -18,7 +18,6 @@ function Spending(props: any) {
     options: {
       chart: {
         height: 250,
-        type: "line",
         dropShadow: {
           enabled: true,
           color: "#000",
@@ -44,12 +43,8 @@ function Spending(props: any) {
           }).format(value);
         },
       },
-      stroke: {
-        curve: "smooth",
-      },
       title: {
         text: "Spending Trends by Month",
-        align: "left",
       },
       grid: {
         borderColor: "#e7e7e7",
@@ -83,8 +78,6 @@ function Spending(props: any) {
         },
       },
       legend: {
-        position: "top",
-        horizontalAlign: "right",
         floating: true,
         offsetY: -25,
         offsetX: -5,
@@ -255,7 +248,7 @@ function Spending(props: any) {
   return (
     <>
       <Chart
-        options:any={chartState.options}
+        options={chartState.options}
         series={chartState.series}
         type="line"
         width="300"
