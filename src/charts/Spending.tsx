@@ -13,7 +13,7 @@ function Spending(props: any) {
   var [chartMonths, setChartMonths] = useState(months);
   var [chartData, setChartData] = useState(initialValue);
 
-  var chartSetup = {
+  const [chartState, setChartState] = useState({
     series: chartData,
     options: {
       chart: {
@@ -90,9 +90,7 @@ function Spending(props: any) {
         offsetX: -5,
       },
     },
-  };
-
-  const [chartState, setChartState] = useState(chartSetup);
+  });
 
   useEffect(() => {
     setChartMonths(prepareXAxisData);
@@ -103,7 +101,19 @@ function Spending(props: any) {
   }, [chartMonths]);
 
   useEffect(() => {
-    setChartState(chartSetup);
+    setChartState({
+      ...chartState,
+      series: chartData,
+      options: {
+        ...chartState.options,
+        xaxis: {
+          ...chartState.options.xaxis,
+          categories: chartMonths.map((month: { name: any }) => {
+            return month.name;
+          }),
+        },
+      },
+    });
   }, [chartData]);
 
   var prepareXAxisData = () => {
@@ -211,7 +221,7 @@ function Spending(props: any) {
 
         data.push({ name: accountType, data: amountArray });
       });
-      console.log(data);
+      //console.log(data);
       {
         /*var accumulator = (array: Transaction[]) => {
         var flattenArray = array.flatMap((f) => {
@@ -248,7 +258,7 @@ function Spending(props: any) {
         options:any={chartState.options}
         series={chartState.series}
         type="line"
-        width="500"
+        width="300"
       />
     </>
   );
