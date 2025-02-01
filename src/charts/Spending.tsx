@@ -6,7 +6,7 @@ import { Month, Transaction } from "../models/models";
 import "./charts.css";
 
 function Spending(props: any) {
-  console.log(props);
+  //console.log(props);
 
   var initialValue: { name: string; data: number[] }[] = [];
 
@@ -230,15 +230,6 @@ function Spending(props: any) {
           return acc;
         }, []);
       };
-
-      chartMonths.forEach((month) => {
-        //console.log("month: ", month);
-
-        var tempData = filterTransactionsByAccountType.filter((transaction) => {
-          return transaction.month.id == month.id;
-        });
-        //console.log(tempData);
-        data.push(accumulator(tempData));
       });*/
       }
     }
@@ -251,7 +242,7 @@ function Spending(props: any) {
         options={chartState.options}
         series={chartState.series}
         type="line"
-        width="300"
+        width="100%"
       />
     </>
   );
