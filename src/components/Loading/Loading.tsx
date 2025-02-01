@@ -10,7 +10,7 @@ function Loading() {
   const [showTransactions, setShowTransactions] = useState(false);
 
   const loadingRedirectFunc = () => {
-    window.location.hash = "/personal-finance-app/#home";
+    window.location.hash = "#/home";
   };
 
   var showAccountsFunc = () => {
