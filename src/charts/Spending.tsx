@@ -242,7 +242,7 @@ function Spending(props: any) {
         options={chartState.options}
         series={chartState.series}
         type="line"
-        width="100%"
+        width="500"
       />
     </>
   );
