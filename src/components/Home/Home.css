@@ -62,6 +62,7 @@
   flex-direction: column;
   gap: 25px;
   width: 45%;
+  height: 100%;
 }
 
 .chart {
@@ -73,6 +74,7 @@
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-evenly;
+  height: 50%;
 }
 
 .chart-left-1,
